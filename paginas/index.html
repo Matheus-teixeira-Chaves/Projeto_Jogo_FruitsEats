@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FRUITS EATS </title>
+    <link rel="stylesheet" href="/estilos/estilo.css">
+    <link rel="shortcut icon" href="/imagens/icone.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div id="identidicacao">
+            <h2> Fruits Eats <img src="/imagens/abacaxi.png" class="img_titulo" alt="abacaxi titulo"> </h2>
+            <p> 
+                <span class = "dadosJogador"> Jogador:  <span id="nome_jogador"> - </span> </span>
+                <span class = "dadosJogador"> Pontos: <span id="pontos"> - </span> </span>
+                <span class = "dadosJogador"> Vidas: <span id="vidas" onchange="fimDeJogo()"> - </span> </span>
+            </p>
+        </div>
+        <div id="tela_do_Jogo">
+            <span class="containerImage"> <img src="/imagens/abacaxi.png" class="elementos" id ="selecionada" alt="Abacaxi" onclick="adicionarPontos(this)"  /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/banana.png" class="elementos" alt="Banana" onclick="adicionarPontos(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/batata_frita.png" class="elementos" alt="Batata Frita" onclick="tirarVidas(this)"  /></span>
+            
+            <span class="containerImage"> <img src="/imagens/bolo.png" class="elementos" alt="Bolo" onclick="tirarVidas(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/chocolate.png" class="elementos" alt="Chocolate" onclick="tirarVidas(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/hamburguer.png" class="elementos" alt="Hamburguer" onclick="tirarVidas(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/laranja.png" class="elementos" alt="Laranja" onclick="adicionarPontos(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/maca.png" class="elementos" alt="Maçã" onclick="adicionarPontos(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/melancia.png" class="elementos" alt="Mêlancia" onclick="adicionarPontos(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/morango.png" class="elementos" alt="Morango" onclick="adicionarPontos(this)" /> </span>
+            
+            <span class="containerImage"> <img src="/imagens/refrigerante.png" class="elementos" alt="Refrigerante" onclick="tirarVidas(this)" /> </span>
+        </div>
+        
+        <span id="txt_fim_jogo"></span>
+       
+        <div id="btn">
+            <button class="botao_iniciar" id ="btn_play" onclick="mostrarImagens()" onmousemove="mudarCor(this)" onmouseout="resetarCor(this)"> Iniciar </button>
+            
+            <button class="botao_iniciar" onclick="stopGame()" onmousemove="mudarCor(this)" onmouseout="resetarCor(this)"> Parar </button>
+        </div>
+    </main>
+</body>
+<script src="/funcoes/imagem_jogo.js"></script>
+</html>

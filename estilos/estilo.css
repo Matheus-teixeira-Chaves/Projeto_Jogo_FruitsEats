@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    background-color: #CBE8FA;
+    font-size: 1.1em;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    width: 90vw;
+    height: 100%;
+    margin-left: 5vw;
+    display: grid;
+}
+
+#identidicacao {
+    background-color: #95CEC5;
+    padding: 2vw;
+    grid-template-rows: 1fr 2fr;
+}
+
+h2 {
+    font-family: 'Monoton', cursive;
+}
+
+.img_titulo {
+    height: 50px;
+    width: 50px;
+}
+
+.dadosJogador {
+    margin-left: 10%;
+    font-size: 1rem;
+}
+
+#tela_do_Jogo {
+    width: 100%;
+    height: 65vh;
+    background-image: url("/imagens/imagem_de_fundo.jpg");
+    grid-template-rows: 2fr 4fr;
+}
+
+#btn {
+    grid-template-rows: 4fr 5fr;
+}
+
+#img_fundo {
+    width: 100%;
+    height: 80vh;
+}
+
+#tela_do_Jogo > img {
+    height: 5vh;
+    width: 5vw;
+    opacity: 1;
+}
+
+.containerImage {
+    height: 10vh;
+    width: 10vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.elementos {
+    animation: caindo 10s 10ms  infinite;
+    height: 20vh;
+    width: 20vw;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes caindo {
+    0% {
+        transform: translatey(0px) rotate(0deg);
+    }
+
+    15% {
+        transform: translatey(15vh) rotate(30deg);
+    }
+
+    25% {
+        transform: translatey(25vh) rotate(-30deg);
+    }
+
+    50% {
+        transform: translatey(50vh) rotate(30deg);
+    }
+
+    70% {
+        transform: translatey(70vh) rotate(-30deg);
+    }
+
+    100% {
+        transform: translatey(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+}
+
+
+.botao_iniciar {
+    margin: 2% 10% 2% 15%;
+    display: inline-block;
+    text-align: center;
+    padding: 1%;
+    background-color: #8DBE24;
+    color: #fff;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        width: 90vw;
+        height: 100%;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao_iniciar {
+        margin: 2% 5% 1% 5%;
+        display: inline-block;
+        text-align: center;
+        padding: 1%;
+        background-color: #8DBE24;
+        color: #fff;
+    }
+
+    .dadosJogador {
+        display: flex;
+        margin: 2% 0 0 10%;
+        font-size: 1rem;
+    }
+}
